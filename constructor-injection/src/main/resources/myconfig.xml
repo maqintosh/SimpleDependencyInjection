@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="myLogger" class="basic.com.implementations.LoggerImpl">
+		<property name="name" value="DockerBoyLogger"></property>
+		<property name="version" value="2.2"></property>
+	</bean>
+
+	<bean id="UsersRepo"
+		class="basic.com.implementations.UsersReporistoryImpl">
+		<constructor-arg ref="myLogger"></constructor-arg>
+		<constructor-arg index="1"
+			value="https://github.com/maqintosh/"></constructor-arg>
+		<constructor-arg index="2"
+			value="SimpleDependencyInjection"></constructor-arg>
+	</bean>
+
+</beans>
