@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="locale" class="java.util.Locale"
+		factory-method="getDefault"></bean>
+
+	<bean id="firstUser" class="org.cieslinski.main.User">
+		<constructor-arg value="Jarek" index="0"></constructor-arg>
+		<constructor-arg value="44" index="1"></constructor-arg>
+		<constructor-arg ref="locale"></constructor-arg>
+	</bean>
+
+	<bean id="sampleBean" class="org.cieslinski.main.SampleBean">
+		<property name="user" ref="firstUser"></property>
+		<property name="stringValue" value="Ala ma kota ota ta a"></property>
+		<property name="intValue" value="1994"></property>
+	</bean>
+
+	<bean id="secondUser" class="org.cieslinski.main.User"
+		c:_0="Janek z namespace'a" c:_1="48" c:_2-ref="locale"></bean>
+
+	<bean id="sampleBean2" class="org.cieslinski.main.SampleBean"
+		p:stringValue="Ala ala z namespace'a" p:intValue="22"
+		p:user-ref="secondUser"></bean>
+
+</beans> 
