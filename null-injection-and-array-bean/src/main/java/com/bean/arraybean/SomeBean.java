@@ -1,0 +1,49 @@
+package com.bean.arraybean;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+public class SomeBean {
+	List<String> stringList;
+	Set<Integer> integerList;
+	Long[] longArray;
+
+	public List<String> getStringList() {
+		return stringList;
+	}
+
+	public void setStringList(List<String> stringList) {
+		this.stringList = stringList;
+	}
+
+	public Set<Integer> getIntegerList() {
+		return integerList;
+	}
+
+	public void setIntegerList(Set<Integer> integerList) {
+		this.integerList = integerList;
+	}
+
+	public Long[] getLongArray() {
+		return longArray;
+	}
+
+	public void setLongArray(Long[] longArray) {
+		this.longArray = longArray;
+	}
+
+	@Override
+	public String toString() {
+		return "SomeBean [stringList=" + stringList + ", integerList=" + integerList + ", longArray="
+				+ Arrays.toString(longArray) + "]";
+	}
+
+	public SomeBean(List<String> stringList, Set<Integer> integerList, Long[] longArray) {
+		super();
+		this.stringList = stringList;
+		this.integerList = integerList;
+		this.longArray = longArray;
+	}
+
+}
