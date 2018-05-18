@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="someBean" class="com.bean.arraybean.SomeBean">
+		<constructor-arg>
+			<list>
+				<value>jeden</value>
+				<value>dwa</value>
+				<value>trzy</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>1993</value>
+				<value>13</value>
+				<value>9098</value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg>
+			<array>
+				<value>44</value>
+				<value>42</value>
+				<value>65</value>
+			</array>
+		</constructor-arg>
+	</bean>
+
+
+	<!-- Wsztzykiwanie null do beanow i bean wewnetrzny -->
+	<bean id="user" class="com.bean.user.User">
+		<constructor-arg value="Januuuuszek"></constructor-arg>
+		<!-- <property name="name" value="Janusz z 80tki"></property> -->
+		<property name="address">
+			<bean class="com.bean.user.Address">
+				<constructor-arg value="Warsaw"></constructor-arg>
+				<constructor-arg value="03-122"></constructor-arg>
+				<constructor-arg value="Bieniewicka"></constructor-arg>
+				<constructor-arg value="111"></constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="user2" class="com.bean.user.User">
+		<constructor-arg>
+			<null />
+		</constructor-arg>
+	</bean> 
+
+
+</beans>
