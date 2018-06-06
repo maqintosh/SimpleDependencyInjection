@@ -61,4 +61,14 @@
 		</property>
 	</bean>
 
+
+
+<bean id="bezimiennaClazz1" class="org.cieslinski.main.BezimiennaClazz">
+<property name="imie" value="Jam nie mam imienia"></property>
+</bean>
+<bean id="klasyczny" class="org.cieslinski.main.KeeperClazz" autowire="byName">
+</bean>
+
+
+
 </beans>

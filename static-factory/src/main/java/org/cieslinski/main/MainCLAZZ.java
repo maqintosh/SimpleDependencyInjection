@@ -33,6 +33,12 @@ public class MainCLAZZ {
 		LocalClazz bean = applicationContext.getBean("mapy",LocalClazz.class);
 		System.out.println(bean.getLocals());
 		System.out.println(bean.getUstawienia());
+		KeeperClazz bean2 = applicationContext.getBean("klasyczny",KeeperClazz.class);
+		System.out.println(bean2.getBezimiennaClazz1().getImie());
+		
+		
+		
+		
 	}
 
 }
