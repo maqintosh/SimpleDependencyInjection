@@ -29,6 +29,10 @@ public class MainCLAZZ {
 		User usersInst = applicationContext.getBean("anotherUser", User.class);
 		System.out.println("Uzycie instancyjnej metody fabrykujacej -> "+ usersInst);
 
+		
+		LocalClazz bean = applicationContext.getBean("mapy",LocalClazz.class);
+		System.out.println(bean.getLocals());
+		System.out.println(bean.getUstawienia());
 	}
 
 }
