@@ -9,6 +9,7 @@ import java.util.Locale;
 import javax.swing.text.AbstractDocument.Content;
 
 import org.cieslinski.creator.UsersCreator;
+import org.cieslinski.konstruktory.App;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,7 +20,7 @@ public class MainCLAZZ {
 	public static void main(String[] args) {
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Context.xml");
-		Calendar calendar = applicationContext.getBean("calendar", Calendar.class);
+		/*Calendar calendar = applicationContext.getBean("calendar", Calendar.class);
 		DateFormat format = (DateFormat) applicationContext.getBean("format");
 		System.out.println(format.format(calendar.getTime()));
 		
@@ -34,11 +35,11 @@ public class MainCLAZZ {
 		System.out.println(bean.getLocals());
 		System.out.println(bean.getUstawienia());
 		KeeperClazz bean2 = applicationContext.getBean("klasyczny",KeeperClazz.class);
-		System.out.println(bean2.getBezimiennaClazz1().getImie());
+		System.out.println(bean2.getBezimiennaClazz1().getImie());*/
 		
-		
-		
-		
+		App bean = applicationContext.getBean("app",App.class);
+		System.out.println(bean.getDictRepo().getMap());
+		System.out.println(bean.getUserrepo().equal("USER?"));
 	}
 
 }

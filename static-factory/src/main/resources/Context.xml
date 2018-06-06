@@ -70,5 +70,19 @@
 </bean>
 
 
+<bean id="repoUser" class="org.cieslinski.konstruktory.UserRepo"></bean>
+<bean id="repoDict" class="org.cieslinski.konstruktory.DictRepo"></bean>
+
+<bean id="app" class="org.cieslinski.konstruktory.App" autowire="constructor"></bean>
+
+
+
+
+
+
+
+
+
+
 
 </beans>
